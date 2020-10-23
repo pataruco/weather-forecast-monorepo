@@ -55,16 +55,10 @@ So, for example, a `GET` request to `/forecast?city=London, UK` would return a J
 
 ## How to install it?
 
-1. Copy this project and paste it on `~/development`
+2. Navigate to the package
 
 ```sh
-cp -R ~/development/01-classwork/week-08/thursday/morning/cuestion-de-tiempo ~/development
-```
-
-2. Navigate to the project
-
-```sh
-cd ~/development/cuestion-de-tiempo
+cd weather-forecast-monorepo
 ```
 
 3. Install dependencies
@@ -96,7 +90,7 @@ OPEN_WEATHER_API_KEY='APIKEYNUMBER'
 1. On your terminal run
 
 ```sh
-yarn start
+yarn workspace server start
 ```
 
 2. Open Postman and create a `GET` request to your API
@@ -109,4 +103,4 @@ http://localhost:5000/forecast?city=Madrid
 
 ## Extras
 
-We wrote some pseudo code [here](./docs/pseudo-code.md)
+We wrote some pseudo code [here](../docs/pseudo-code.md)
