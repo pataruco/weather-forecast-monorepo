@@ -3,9 +3,7 @@ import fetch from 'node-fetch';
 
 dotenv.config();
 
-const { OPENCAGE_API_KEY, OPEN_WEATHER_API_KEY, ALEX } = process.env;
-
-console.log({ OPENCAGE_API_KEY, OPEN_WEATHER_API_KEY, ALEX });
+const { OPENCAGE_API_KEY, OPEN_WEATHER_API_KEY } = process.env;
 
 const getCoordinatesByCity = async (city) => {
   try {
