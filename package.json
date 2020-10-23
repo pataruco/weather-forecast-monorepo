@@ -1,0 +1,15 @@
+{
+  "name": "weather-forecast-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:pataruco/weather-forecast-monorepo.git",
+  "author": "Pedro Martin <pataruco@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "workspaces": [
+    "server"
+  ]
+}
