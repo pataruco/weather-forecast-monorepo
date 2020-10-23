@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f128c8fd-5c5c-404e-9c33-3bf51e7003fa/deploy-status)](https://app.netlify.com/sites/weather-forecast-sei/deploys)
+
 # Weather by location client
 
 ## What is it
