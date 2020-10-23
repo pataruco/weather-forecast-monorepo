@@ -10,6 +10,7 @@
     "lerna": "^3.22.1"
   },
   "workspaces": [
-    "server"
+    "server",
+    "client"
   ]
 }
