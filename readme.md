@@ -1,3 +1,7 @@
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+
+![](https://pataruco.github.io/ga-assets/assets/logos/ga.svg)
+
 # Weather forecast monorepo
 
 ## What is it

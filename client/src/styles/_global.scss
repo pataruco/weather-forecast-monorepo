@@ -4,4 +4,21 @@
 
 body {
   font-size: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+picture {
+  display: block;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

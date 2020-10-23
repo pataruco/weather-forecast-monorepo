@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { getWeatherData } from '../lib/get-weather.js';
+import Footer from './footer.js';
+import Header from './header.js';
 import SearchForm from './search-form';
 import WeatherItem from './weather-item';
 
@@ -19,19 +21,22 @@ function App() {
   };
 
   return (
-    <>
-      <h1>Weather forecast</h1>
-      <SearchForm
-        handleSubmit={handleSubmit}
-        handleChange={handleChange}
-        location={location}
-      />
-      <section>
-        {weatherData.map((weather) => (
-          <WeatherItem key={weather.dt} weather={weather} />
-        ))}
-      </section>
-    </>
+    <div className="app">
+      <Header />
+      <main>
+        <SearchForm
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+          location={location}
+        />
+        <section className="weather">
+          {weatherData.map((weather) => (
+            <WeatherItem key={weather.dt} weather={weather} />
+          ))}
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
