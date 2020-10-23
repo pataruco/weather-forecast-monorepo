@@ -10,7 +10,7 @@ The structure of this repo is following principles of [monorepo](https://en.wiki
 
 It is divided in two main packages
 
-- [Server](./server/readme.md): A simple Express server that receive `GET` request to `/forecast?city=London, UK` would return a JSON payload with a weekly forecast of a given location.
+- [Server](./server/readme.md): A simple Express server that receive `GET` request to `/forecast?city=Madrid` would return a JSON payload with a weekly forecast of a given location.
 - [Client](./client/readme.md) A simple React application that render 7 days weather forecast for a given location
 
 ## How to install
