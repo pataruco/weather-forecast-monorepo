@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import logger from './lib/logger.js';
 
 // middlewares import
@@ -15,6 +16,7 @@ const HOST = process.env.HOST || 'localhost';
 const server = express();
 
 // JSON body parser
+server.use(cors());
 server.use(bodyParser.json());
 server.use(jsonResponseMiddleware);
 // Logger
