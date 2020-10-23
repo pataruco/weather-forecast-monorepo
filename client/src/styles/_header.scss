@@ -1,0 +1,11 @@
+header {
+  padding: 1.25rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  picture {
+    max-width: 10%;
+  }
+}

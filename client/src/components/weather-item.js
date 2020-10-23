@@ -1,23 +1,47 @@
 import React from 'react';
 
 const WeatherItem = ({ weather }) => {
+  console.log({ weather });
+  const {
+    dt: unixTime,
+    weather: [weatherConditions],
+    feels_like: { day, night },
+  } = weather;
+
+  const { icon, description } = weatherConditions;
+
+  const dateFormatoptions = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+
+  const dateFormated = new Intl.DateTimeFormat(
+    'en-GB',
+    dateFormatoptions,
+  ).format(new Date(unixTime * 1000));
+
   return (
-    <article key={weather.dt}>
-      <h2>
-        {new Intl.DateTimeFormat('en-GB').format(new Date(weather.dt * 1000))}
-      </h2>
+    <article>
+      <h2>{dateFormated}</h2>
       <picture>
         <img
-          src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
-          alt={weather.weather[0].description}
+          src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+          alt={description}
         />
       </picture>
+      <p>{description}</p>
       <h3>Temperature</h3>
       <dl>
-        <dt>Day</dt>
-        <dd>{weather.feels_like.day}</dd>
-        <dt>Night</dt>
-        <dd>{weather.feels_like.night}</dd>
+        <div>
+          <dt>Day:</dt>
+          <dd>{day}&#8451;</dd>
+        </div>
+        <div>
+          <dt>Night:</dt>
+          <dd>{night}&#8451;</dd>
+        </div>
       </dl>
     </article>
   );

@@ -1,0 +1,101 @@
+main {
+  flex: 1 auto;
+  padding: 1.25rem;
+}
+
+form {
+  width: 33%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin-bottom: 0.75rem;
+  }
+
+  label {
+    font-size: 1.25em;
+    text-align: center;
+  }
+
+  input {
+    padding: 0.5rem;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    align-self: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    transition: 0.1s ease-in all;
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+      &:focus {
+        color: black;
+      }
+    }
+
+    &:focus {
+      color: black;
+      border-bottom-color: black;
+    }
+  }
+
+  button {
+    appearance: none;
+    display: block;
+    max-width: 25%;
+    align-self: center;
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+    padding: 0.5rem 0.75rem;
+    transition: 0.1s ease-in all;
+    &:active {
+      color: black;
+      background-color: white;
+    }
+  }
+}
+
+.weather {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  & > * {
+    flex-basis: calc(25% - 1.25rem);
+    border: 2px solid;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    h2 {
+      margin-top: 0;
+      text-align: center;
+    }
+    picture {
+      max-width: 100px;
+      margin: 0 auto;
+    }
+
+    p {
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    dl {
+      margin: 0;
+    }
+
+    div:first-of-type {
+      margin-bottom: 0.33rem;
+    }
+
+    dt {
+      display: inline-block;
+      min-width: 5ch;
+    }
+
+    dd {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+  }
+}
