@@ -58,7 +58,7 @@ So, for example, a `GET` request to `/forecast?city=London, UK` would return a J
 2. Navigate to the package
 
 ```sh
-cd weather-forecast-monorepo
+cd weather-forecast-monorepo/server
 ```
 
 3. Install dependencies
