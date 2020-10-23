@@ -2,7 +2,7 @@
 
 ## What is it
 
-Is the resolution of the challenge described [here](./docs/challenge.md), which is an API that receive a location by search query and return the weather forecast for the next 7 days
+Is the resolution of the challenge described [here](../docs/challenge.md), which is an API that receive a location by search query and return the weather forecast for the next 7 days
 
 So, for example, a `GET` request to `/forecast?city=London, UK` would return a JSON payload with a weekly forecast for London. For example:
 
