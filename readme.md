@@ -54,3 +54,46 @@ yarn workspace server start
 ```sh
 yarn workspace client start
 ```
+
+## How to deploy
+
+### Server
+
+1. Login into heroku
+
+   ```sh
+   heroku login
+   ```
+
+2. If you are not tet created an herku folder for this app, run the following, otherwise step this
+
+   ```sh
+   heroku create --region=eu
+   ```
+
+3. Deploy
+
+   ```sh
+   git push heroku master
+   ```
+
+4. Once is deployed and functional take the URL of the app and added as a value of the `REACT_APP_SERVER_URL` on `.env.production`
+
+```sh
+# ./client/.env.production
+REACT_APP_SERVER_URL='https://hipster-name.herokuapp/forecast'
+```
+
+### Client
+
+1. Create a react production build
+
+   ```sh
+   yarn workspace client build
+   ```
+
+2. Deploy to Netlify
+
+   ```sh
+   netlify deploy
+   ```
