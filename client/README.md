@@ -8,30 +8,39 @@ Is a React app created with [`create-react-app`](https://create-react-app.dev/) 
 
 ## How to install it?
 
-2. Navigate to the package
+1. Navigate to the package
 
-```sh
-cd weather-forecast-monorepo/client
-```
+   ```sh
+   cd weather-forecast-monorepo/client
+   ```
 
-3. Install dependencies
+2. Install dependencies
 
-```sh
-yarn
-```
+   ```sh
+   yarn
+   ```
 
 ## How to run it
 
-1. On your terminal run
+1.  Create two environmental files from `.env.example`, one for production and the other for development
 
-```sh
-yarn workspace client start
-```
+    ```sh
+    cat .env.example >> .env.development
+    cat .env.example >> .env.production
+    ```
+
+2.  Change the values on the `.env files`
+
+3.  On your terminal run
+
+    ```sh
+    yarn workspace client start
+    ```
 
 ## How to make a production build
 
 1. On your terminal run
 
-```sh
-yarn workspace client build
-```
+   ```sh
+   yarn workspace client build
+   ```
